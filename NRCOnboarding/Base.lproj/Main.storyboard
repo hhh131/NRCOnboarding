@@ -21,17 +21,17 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_onboarding_bg" translatesAutoresizingMaskIntoConstraints="NO" id="vln-XM-cS9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-IX-kma">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="r2V-IX-kma">
                                 <rect key="frame" x="0.0" y="48" width="414" height="648"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zYS-Pv-Ubt">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zYS-Pv-Ubt">
                                     <size key="itemSize" width="414" height="648"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jPe-31-mrz">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCell" id="jPe-31-mrz" customClass="OnboardingCell" customModule="NRCOnboarding" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="648"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N0W-B5-c3b">
@@ -45,13 +45,13 @@
                                                         <constraint firstAttribute="width" constant="250" id="k2A-ud-Xdm"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Moves On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1E-8L-mse">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Moves On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1E-8L-mse">
                                                     <rect key="frame" x="123.5" y="450" width="167.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAy-vW-lMT">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAy-vW-lMT">
                                                     <rect key="frame" x="50" y="496.5" width="314" height="81.5"/>
                                                     <string key="text">You're first race, last mile, or 
 push out the door whatever
@@ -74,6 +74,11 @@ your pace, distance or need, we've got the playlist to match</string>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="414" height="648"/>
+                                        <connections>
+                                            <outlet property="discriptionLabel" destination="RAy-vW-lMT" id="iMJ-qw-o0L"/>
+                                            <outlet property="thumnailImageView" destination="I0R-CO-5b4" id="Ade-jW-qBw"/>
+                                            <outlet property="titleLabel" destination="D1E-8L-mse" id="atq-e1-c75"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -125,6 +130,9 @@ your pace, distance or need, we've got the playlist to match</string>
                             <constraint firstItem="vln-XM-cS9" firstAttribute="top" secondItem="XMm-Yj-DSd" secondAttribute="top" id="s2t-ax-1OI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="r2V-IX-kma" id="K09-4b-ldE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDh-4s-Hys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
