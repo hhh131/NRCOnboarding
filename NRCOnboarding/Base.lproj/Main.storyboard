@@ -46,13 +46,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Moves On" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1E-8L-mse">
-                                                    <rect key="frame" x="123.5" y="450" width="167.5" height="26.5"/>
+                                                    <rect key="frame" x="123.5" y="470.5" width="167.5" height="26.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAy-vW-lMT">
-                                                    <rect key="frame" x="50" y="496.5" width="314" height="81.5"/>
+                                                    <rect key="frame" x="-19" y="517" width="452" height="61"/>
                                                     <string key="text">You're first race, last mile, or 
 push out the door whatever
 your pace, distance or need, we've got the playlist to match</string>
@@ -69,7 +69,6 @@ your pace, distance or need, we've got the playlist to match</string>
                                                 <constraint firstItem="RAy-vW-lMT" firstAttribute="centerX" secondItem="N0W-B5-c3b" secondAttribute="centerX" id="JqF-pb-RTr"/>
                                                 <constraint firstAttribute="bottom" secondItem="RAy-vW-lMT" secondAttribute="bottom" constant="70" id="VFc-dG-Wsq"/>
                                                 <constraint firstItem="D1E-8L-mse" firstAttribute="centerX" secondItem="N0W-B5-c3b" secondAttribute="centerX" id="lW3-7m-HrP"/>
-                                                <constraint firstItem="RAy-vW-lMT" firstAttribute="leading" secondItem="N0W-B5-c3b" secondAttribute="leading" constant="50" id="m3V-cC-7uc"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,6 +131,7 @@ your pace, distance or need, we've got the playlist to match</string>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="r2V-IX-kma" id="K09-4b-ldE"/>
+                        <outlet property="pageControll" destination="XRJ-4P-WY9" id="7Nw-Kc-dhc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JDh-4s-Hys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
